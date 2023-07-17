@@ -58,4 +58,10 @@ clean:
 test:
 	go test -v github.com/runopsio/hoop/...
 
+test-ci:
+	go test -v -count=1 -race -shuffle=on -coverprofile=coverage.txt -bench=. -benchtime=1x github.com/runopsio/hoop/...
+
+vuln:
+	osv-scanner -r .
+
 .PHONY: release publish publish-tools clean test build build-webapp package-binaries package-helmchart publish-assets
