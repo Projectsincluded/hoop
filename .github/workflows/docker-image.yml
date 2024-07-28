@@ -21,7 +21,7 @@ jobs:
         with:
           repository: hoophq/libhoop
           path: './libhoop'
-          token: ${{ secrets.GH_TOKEN }}  # Ensure token is provided here
+          token: ${{ secrets.GITHUB_TOKEN }} # Ensure token is provided here
 
       - name: Setup Go
         uses: actions/setup-go@v3
