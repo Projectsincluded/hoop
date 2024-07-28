@@ -15,8 +15,6 @@ jobs:
     steps:
       - name: Checkout Hoop
         uses: actions/checkout@v3
-        with:
-          token: ${{ secrets.GH_TOKEN }}  # Ensure token is provided here
 
       - name: Checkout libhoop
         uses: actions/checkout@v3
